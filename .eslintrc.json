@@ -21,6 +21,13 @@
         "react",
         "prettier"
     ],
+    "settings": {
+      "import/resolver": {
+        "babel-plugin-root-import": {
+          "rootPathSuffix": "src"
+        }
+      }
+    },
     "rules": {
         "prettier/prettier": "error",
         "react/jsx-filename-extension": [
