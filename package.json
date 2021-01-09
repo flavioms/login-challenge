@@ -19,6 +19,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
+    "test:nowatch": "react-app-rewired test --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -26,13 +27,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "yarn test:nowatch && lint-staged",
       "prepare-commit-msg":"exec < /dev/tty && git cz --hook || true", 
       "commit-msg":"commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "*.ts": [
+    "*.js": [
       "eslint --fix",
       "git add"
     ]
