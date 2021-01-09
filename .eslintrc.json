@@ -28,6 +28,19 @@
         }
       }
     },
+    "overrides": [
+      {
+        "files": [
+          "**/*.test.js",
+          "**/*.test.jsx",
+          "**/*.spec.js",
+          "**/*.spec.jsx"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ],
     "rules": {
         "prettier/prettier": "error",
         "react/jsx-filename-extension": [
