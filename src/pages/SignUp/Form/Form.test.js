@@ -6,13 +6,18 @@ import {
   fireEvent,
   wait,
 } from '@testing-library/react';
+import Theme from '~/styles/theme';
 import Form from './index';
 
 const handleSubmit = jest.fn();
 
 describe('Test Form component', () => {
   it('should render inputs and button', async () => {
-    render(<Form handleSubmit={handleSubmit} />);
+    render(
+      <Theme>
+        <Form handleSubmit={handleSubmit} />
+      </Theme>
+    );
     const fieldEmail = await waitForElement(() => screen.getByTestId('email'));
     expect(fieldEmail).toBeDefined();
 
@@ -46,7 +51,11 @@ describe('Test Form component', () => {
       password: '123456',
       term: true,
     };
-    render(<Form handleSubmit={handleSubmit} />);
+    render(
+      <Theme>
+        <Form handleSubmit={handleSubmit} />
+      </Theme>
+    );
 
     const fieldEmail = await waitForElement(() => screen.getByTestId('email'));
     await wait(() => {
