@@ -21,7 +21,7 @@ Button.propTypes = {
   id: PropTypes.string,
   type: PropTypes.string,
   label: PropTypes.string,
-  Icon: PropTypes.node,
+  Icon: PropTypes.oneOfType([PropTypes.element, PropTypes.node, PropTypes.any]),
   testid: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func.isRequired,

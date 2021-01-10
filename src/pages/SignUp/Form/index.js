@@ -77,7 +77,8 @@ function Form({ handleSubmit }) {
         type='submit'
         testid='btn-submit'
         label='Cadastrar'
-        Icon={() => <FaLock />}
+        onClick={formik.handleSubmit}
+        Icon={FaLock}
       />
     </Container>
   );

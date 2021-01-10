@@ -12,7 +12,7 @@ describe('Test Button component', () => {
   it('should render button', async () => {
     render(
       <Theme>
-        <Button label='Cadastrar' testid='btn' onChange={() => jest.fn()} />
+        <Button label='Cadastrar' testid='btn' onClick={() => jest.fn()} />
       </Theme>
     );
     const btnCadastrar = await waitForElement(() => screen.getByTestId('btn'));
