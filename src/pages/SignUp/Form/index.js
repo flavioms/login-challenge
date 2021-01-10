@@ -1,8 +1,10 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import { func } from 'prop-types';
+import { FaLock } from 'react-icons/fa';
 import Input from '~/components/Input';
 import Confirm from '~/components/Confirm';
+import Button from '~/components/Button';
 import { Container } from './styles';
 
 function Form({ handleSubmit }) {
@@ -71,9 +73,12 @@ function Form({ handleSubmit }) {
         value={formik.values.term}
         onChange={formik.handleChange}
       />
-      <button type='submit' data-testid='btn-submit'>
-        Cadastrar
-      </button>
+      <Button
+        type='submit'
+        testid='btn-submit'
+        label='Cadastrar'
+        Icon={() => <FaLock />}
+      />
     </Container>
   );
 }

@@ -11,6 +11,7 @@
     "@types/jest": "^26.0.20",
     "babel-loader": "8.1.0",
     "formik": "^2.2.6",
+    "polished": "^4.0.5",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -27,7 +28,7 @@
     "test": "react-app-rewired test",
     "test:nowatch": "react-app-rewired test --watchAll=false",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
+    "storybook": "start-storybook -p 6060 -c .storybook watch-css -s ./src",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
