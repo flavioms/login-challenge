@@ -78,4 +78,30 @@ describe('Test Form component', () => {
     });
     expect(value).toEqual('144.144.144-11');
   });
+
+  it('should hide and show password', async () => {
+    render(
+      <Theme>
+        <Input
+          id='password'
+          name='password'
+          testid='password'
+          type='password'
+          label='Senha:'
+          onChange={() => jest.fn()}
+        />
+      </Theme>
+    );
+    const fieldPassowrd = await waitForElement(() =>
+      screen.getByTestId('password')
+    );
+    expect(fieldPassowrd.type).toEqual('password');
+
+    const btnShowHide = await waitForElement(() =>
+      screen.getByTestId('showPassword')
+    );
+    fireEvent.click(btnShowHide);
+
+    expect(fieldPassowrd.type).toEqual('text');
+  });
 });

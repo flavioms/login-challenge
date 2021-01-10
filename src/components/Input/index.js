@@ -1,8 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import InputMask from 'react-input-mask';
-import { Container, Label, InputStyle, Error } from './styles';
+import { AiFillEye } from 'react-icons/ai';
+import { Container, Label, InputStyle, Error, Eye } from './styles';
 
 function Input({
   label,
@@ -18,6 +19,24 @@ function Input({
   placeholder,
   disabled,
 }) {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const ShowPassword = () => (
+    <Eye
+      onClick={() => setPasswordVisible(!passwordVisible)}
+      data-testid='showPassword'
+    >
+      <AiFillEye />
+    </Eye>
+  );
+
+  const handleVerifyPassword = (_type) => {
+    if (_type === 'password') {
+      return passwordVisible ? 'text' : 'password';
+    }
+    return _type;
+  };
+
   return (
     <Container>
       <Label htmlFor={id}>{label}</Label>
@@ -44,7 +63,7 @@ function Input({
         </InputMask>
       ) : (
         <InputStyle
-          type={type}
+          type={handleVerifyPassword(type)}
           id={id}
           data-testid={testid}
           name={name}
@@ -56,7 +75,7 @@ function Input({
           disabled={disabled}
         />
       )}
-
+      {type === 'password' && <ShowPassword />}
       {error && <Error>{error}</Error>}
     </Container>
   );

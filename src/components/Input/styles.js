@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  position: relative;
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
@@ -51,4 +52,21 @@ export const Error = styled.div`
   font-weight: ${({ theme }) => theme.fontWeight.normal};
   color: ${({ theme }) => theme.colors.red};
   margin-top: 0.3rem;
+`;
+
+export const Eye = styled.button`
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  background: none;
+  border: none;
+
+  & > svg {
+    color: ${({ theme }) => theme.colors.base[400]};
+    font-size: ${({ theme }) => theme.fontSizes.xl};
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.base[500]};
+    }
+  }
 `;
