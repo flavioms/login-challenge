@@ -9,7 +9,7 @@ import {
 import Theme from '~/styles/theme';
 import Input from './index';
 
-describe('Test Form component', () => {
+describe('Test Input component', () => {
   it('should render input', async () => {
     render(
       <Theme>

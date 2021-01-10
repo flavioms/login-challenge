@@ -2,6 +2,7 @@ import React from 'react';
 import { useFormik } from 'formik';
 import { func } from 'prop-types';
 import Input from '~/components/Input';
+import Confirm from '~/components/Confirm';
 import { Container } from './styles';
 
 function Form({ handleSubmit }) {
@@ -57,11 +58,16 @@ function Form({ handleSubmit }) {
         value={formik.values.password}
         onChange={formik.handleChange}
       />
-      <input
-        type='checkbox'
+      <Confirm
         name='term'
         id='term'
-        data-testid='term'
+        testid='term'
+        text={
+          <p>
+            Li e estou de acordo com a <a href='/#'>Política de Privacidade</a>{' '}
+            e a <a href='/#'>Política de Uso de Informações</a>.
+          </p>
+        }
         value={formik.values.term}
         onChange={formik.handleChange}
       />

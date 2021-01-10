@@ -107,7 +107,7 @@ describe('Test Form component', () => {
     await wait(() => {
       fireEvent.click(fieldTerm);
     });
-    expect(fieldTerm.value).toEqual('true');
+    expect(fieldTerm.checked).toEqual(true);
 
     const btnSubmit = await waitForElement(() =>
       screen.getByTestId('btn-submit')
