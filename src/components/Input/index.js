@@ -12,6 +12,8 @@ function Input({
   value,
   type,
   mask,
+  maskPlaceholder,
+  alwaysShowMask,
   error,
   testid,
   onChange,
@@ -43,6 +45,8 @@ function Input({
       {mask ? (
         <InputMask
           mask={mask}
+          maskPlaceholder={maskPlaceholder}
+          alwaysShowMask={alwaysShowMask}
           id={id}
           name={name}
           value={value}
@@ -89,6 +93,8 @@ Input.propTypes = {
   value: PropTypes.string,
   type: PropTypes.string,
   mask: PropTypes.string,
+  maskPlaceholder: PropTypes.string,
+  alwaysShowMask: PropTypes.bool,
   error: PropTypes.string,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
@@ -100,6 +106,8 @@ Input.defaultProps = {
   value: '',
   type: 'text',
   mask: null,
+  maskPlaceholder: '9',
+  alwaysShowMask: false,
   testid: null,
   error: null,
   onChange: undefined,

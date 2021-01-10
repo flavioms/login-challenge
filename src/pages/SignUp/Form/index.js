@@ -34,6 +34,8 @@ function Form({ handleSubmit }) {
         label='CPF'
         testid='cpf'
         mask='999.999.999-99'
+        placeholder='999.999.999-99'
+        maskPlaceholder='999.999.999-99'
         value={formik.values.cpf}
         onChange={formik.handleChange}
       />

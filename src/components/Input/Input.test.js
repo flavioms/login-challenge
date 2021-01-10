@@ -79,7 +79,7 @@ describe('Test Form component', () => {
     expect(value).toEqual('144.144.144-11');
   });
 
-  it('should hide and show password', async () => {
+  it('should show and hide password', async () => {
     render(
       <Theme>
         <Input
