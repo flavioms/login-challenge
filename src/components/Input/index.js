@@ -1,5 +1,7 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
+import InputMask from 'react-input-mask';
 import { Container, Label, InputStyle, Error } from './styles';
 
 function Input({
@@ -8,6 +10,7 @@ function Input({
   id,
   value,
   type,
+  mask,
   error,
   testid,
   onChange,
@@ -18,18 +21,42 @@ function Input({
   return (
     <Container>
       <Label htmlFor={id}>{label}</Label>
-      <InputStyle
-        type={type}
-        id={id}
-        data-testid={testid}
-        name={name}
-        value={value}
-        error={error}
-        onChange={onChange}
-        onBlur={onBlur}
-        placeholder={placeholder}
-        disabled={disabled}
-      />
+      {mask ? (
+        <InputMask
+          mask={mask}
+          id={id}
+          name={name}
+          value={value}
+          onChange={onChange}
+          onBlur={onBlur}
+          disabled={disabled}
+        >
+          {(inputProps) => (
+            <InputStyle
+              type={type}
+              data-testid={testid}
+              error={error}
+              placeholder={placeholder}
+              disableUnderline
+              {...inputProps}
+            />
+          )}
+        </InputMask>
+      ) : (
+        <InputStyle
+          type={type}
+          id={id}
+          data-testid={testid}
+          name={name}
+          value={value}
+          error={error}
+          onChange={onChange}
+          onBlur={onBlur}
+          placeholder={placeholder}
+          disabled={disabled}
+        />
+      )}
+
       {error && <Error>{error}</Error>}
     </Container>
   );
@@ -42,6 +69,7 @@ Input.propTypes = {
   testid: PropTypes.string,
   value: PropTypes.string,
   type: PropTypes.string,
+  mask: PropTypes.string,
   error: PropTypes.string,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
@@ -52,6 +80,7 @@ Input.propTypes = {
 Input.defaultProps = {
   value: '',
   type: 'text',
+  mask: null,
   testid: null,
   error: null,
   onChange: undefined,

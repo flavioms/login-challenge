@@ -27,6 +27,16 @@ Placeholder.args = {
   placeholder: 'Test',
 };
 
+export const Mask = Template.bind({});
+
+Mask.args = {
+  label: 'Input Mask test:',
+  name: 'test',
+  id: 'test',
+  placeholder: 'Test',
+  mask: '999.999.999-99',
+};
+
 export const Error = Template.bind({});
 
 Error.args = {

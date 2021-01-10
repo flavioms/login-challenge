@@ -33,6 +33,7 @@ function Form({ handleSubmit }) {
         id='cpf'
         label='CPF'
         testid='cpf'
+        mask='999.999.999-99'
         value={formik.values.cpf}
         onChange={formik.handleChange}
       />
