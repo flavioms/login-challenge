@@ -8,9 +8,10 @@ export const Container = styled.div`
   height: 100vh;
 `;
 export const Image = styled.img`
-  height: 100%;
+  height: 110%;
 `;
 export const Left = styled.div`
+  position: relative;
   height: 100vh;
   overflow: hidden;
 `;

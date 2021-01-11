@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import Header from './Header';
 import Form from './Form';
 import Footer from './Footer';
+import Message from './Message';
 import Menu from '~/components/Menu';
 import UnsplashImg from '~/assets/img/unsplash.jpg';
 import { Container, Image, Left, Right, RightWrapper } from './styles';
@@ -14,6 +15,7 @@ function SignUp() {
     <Container>
       <Left>
         <Image src={UnsplashImg} />
+        <Message />
       </Left>
       <Right>
         <Menu />
