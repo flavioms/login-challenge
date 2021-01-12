@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mixinRespondTo } from '~/styles/tools';
 
 export const Container = styled.form`
   width: 100%;
@@ -15,9 +16,14 @@ export const Row = styled.div`
   justify-content: space-between;
   width: 100%;
   & > div {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   & > div:first-child {
     margin-right: 2.4rem;
   }
+
+  ${mixinRespondTo.sm`
+    flex-direction: column;
+  `}
 `;

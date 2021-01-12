@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { mixinRespondTo } from './tools';
 import ArialMT from '~/assets/fonts/arialmt.ttf';
 
 export default createGlobalStyle`
@@ -59,9 +60,9 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
-  @media (max-width: 992px) {
+  ${mixinRespondTo.md`
     html {
       font-size: 50%;
     }
-  }
+  `}
 `;
