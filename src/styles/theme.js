@@ -29,6 +29,13 @@ export const theme = {
     bold: 700,
     heavy: 900,
   },
+  breakpoints: {
+    xxs: '320px',
+    xs: '480px',
+    sm: '768px',
+    md: '992px',
+    lg: '1200px',
+  },
 };
 
 const Theme = ({ children }) => (
