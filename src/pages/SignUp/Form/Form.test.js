@@ -46,6 +46,7 @@ describe('Test Form component', () => {
   it('should submit data', async () => {
     const data = {
       email: 'teste@teste.com',
+      name: 'teste',
       cpf: '999.999.999-99',
       birthday: '2021-01-08',
       password: '123456',
@@ -66,6 +67,16 @@ describe('Test Form component', () => {
       });
     });
     expect(fieldEmail.value).toEqual(data.email);
+
+    const fieldName = await waitForElement(() => screen.getByTestId('name'));
+    await wait(() => {
+      fireEvent.change(fieldName, {
+        target: {
+          value: data.name,
+        },
+      });
+    });
+    expect(fieldName.value).toEqual(data.name);
 
     const fieldCPF = await waitForElement(() => screen.getByTestId('cpf'));
 

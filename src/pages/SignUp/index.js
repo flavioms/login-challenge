@@ -1,4 +1,6 @@
 import React, { useCallback } from 'react';
+import { useDispatch } from 'react-redux';
+import { postSignup } from '~/store/singup';
 import Header from './Header';
 import Form from './Form';
 import Footer from './Footer';
@@ -9,7 +11,14 @@ import UnsplashImg from '~/assets/img/unsplash.jpg';
 import { Container, Image, Left, Right, RightWrapper } from './styles';
 
 function SignUp() {
-  const handleSubmit = useCallback(() => {}, []);
+  const dispatch = useDispatch();
+
+  const handleSubmit = useCallback(
+    (values) => {
+      dispatch(postSignup(values));
+    },
+    [dispatch]
+  );
 
   return (
     <Container>
