@@ -27,7 +27,6 @@ const {
 
 export const postSignup = () => async (dispatch) => {
   try {
-    console.log('aki');
     dispatch(postSignupRequest());
     // CALL API await api.post('/signup', data);
     dispatch(postSignupSuccess());

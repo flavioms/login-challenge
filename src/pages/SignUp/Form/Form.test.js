@@ -48,7 +48,7 @@ describe('Test Form component', () => {
       email: 'teste@teste.com',
       name: 'teste',
       cpf: '999.999.999-99',
-      birthday: '2021-01-08',
+      birthday: '2000-01-08',
       password: '123456',
       term: true,
     };

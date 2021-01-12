@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
-import { useDispatch } from 'react-redux';
-import { postSignup } from '~/store/singup';
+import { useDispatch, useSelector } from 'react-redux';
+import { postSignup } from '~/store/signup';
 import Header from './Header';
 import Form from './Form';
 import Footer from './Footer';
@@ -12,6 +12,7 @@ import { Container, Image, Left, Right, RightWrapper } from './styles';
 
 function SignUp() {
   const dispatch = useDispatch();
+  const { loading } = useSelector((state) => state.signup);
 
   const handleSubmit = useCallback(
     (values) => {
@@ -32,7 +33,7 @@ function SignUp() {
         <Menu />
         <RightWrapper>
           <Header />
-          <Form handleSubmit={handleSubmit} />
+          <Form handleSubmit={handleSubmit} isLoading={loading} />
           <Footer />
         </RightWrapper>
       </Right>

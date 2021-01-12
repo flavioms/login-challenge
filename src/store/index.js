@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import toastReducer from './toast';
-import singupReducer from './singup';
+import signupReducer from './signup';
 
 export default configureStore({
   reducer: {
     toast: toastReducer,
-    singup: singupReducer,
+    signup: signupReducer,
   },
 });

@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^26.0.20",
     "babel-loader": "8.1.0",
+    "date-fns": "^2.16.1",
     "formik": "^2.2.6",
     "polished": "^4.0.5",
     "prop-types": "^15.7.2",

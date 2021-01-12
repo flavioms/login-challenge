@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFormik } from 'formik';
-import { func } from 'prop-types';
+import { func, bool } from 'prop-types';
 import { FaLock } from 'react-icons/fa';
 import Input from '~/components/Input';
 import Confirm from '~/components/Confirm';
@@ -8,7 +8,7 @@ import Button from '~/components/Button';
 import { Container, Row } from './styles';
 import validation from './validation';
 
-function Form({ handleSubmit }) {
+function Form({ handleSubmit, isLoading }) {
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -100,6 +100,7 @@ function Form({ handleSubmit }) {
         type='submit'
         testid='btn-submit'
         label='Cadastrar'
+        disabled={isLoading}
         onClick={formik.handleSubmit}
         Icon={FaLock}
       />
@@ -109,6 +110,11 @@ function Form({ handleSubmit }) {
 
 Form.propTypes = {
   handleSubmit: func.isRequired,
+  isLoading: bool,
+};
+
+Form.defaultProps = {
+  isLoading: false,
 };
 
 export default React.memo(Form);
