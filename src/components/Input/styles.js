@@ -57,7 +57,7 @@ export const Error = styled.div`
 export const Eye = styled.button`
   position: absolute;
   right: 2rem;
-  bottom: 1rem;
+  top: 3.5rem;
   background: none;
   border: none;
 
