@@ -23,6 +23,7 @@ export const Right = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
 `;
 
 export const RightWrapper = styled.div`

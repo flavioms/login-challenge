@@ -48,6 +48,7 @@
             {"extensions": [".js", ".jsx"]}
         ],
         "import/prefer-default-export": "off",
-        "jsx-quotes": ["error", "prefer-single"]
+        "jsx-quotes": ["error", "prefer-single"],
+        "no-param-reassign": ["error", { "props": false }]
     }
 }
