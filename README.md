@@ -63,11 +63,11 @@ or
 ```shell
 yarn test
 ```
-Input Test - Tests possible situations that may occur with the input components
-Button Test - Tests possible situations that may occur with the button components
-Confirm Test - Tests possible situations that may occur with the confirm component
-Toast Test - Tests possible situations that may occur with the toast component
-Form Test - Tests filling and sending the form completely
+- Input Test - Tests possible situations that may occur with the input components
+- Button Test - Tests possible situations that may occur with the button components
+- Confirm Test - Tests possible situations that may occur with the confirm component
+- Toast Test - Tests possible situations that may occur with the toast component
+- Form Test - Tests filling and sending the form completely
 
 
 ## Style guide
