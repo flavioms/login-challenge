@@ -1,68 +1,83 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Login Challenge  &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
+> Additional information or tag line
 
-## Available Scripts
+This project is a login form using ReactJs that aims to employ knowledge of testing, validation and componentization.
 
-In the project directory, you can run:
+## Installing / Getting started
 
-### `yarn start`
+A quick introduction of the minimal setup you need to get a hello world up &
+running.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```shell
+npm i
+npm start
+```
+or
+```shell
+yarn
+yarn start
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+When executing the command all project dependencies will be installed and the program will be started
 
-### `yarn test`
+## Developing
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Built With
+- "@reduxjs/toolkit": "^1.1.0",
+- "@storybook/cli": "^6.1.11",
+- "@testing-library/react": "^9.3.2",
+- "date-fns": "^2.16.1",
+- "formik": "^2.2.6",
+- "polished": "^4.0.5",
+- "prop-types": "^15.7.2",
+- "react": "^17.0.1",
+- "react-icons": "^4.1.0",
+- "react-input-mask": "^2.0.4",
+- "react-redux": "^7.1.3",
+- "react-router-dom": "^5.2.0",
+- "styled-components": "^5.2.1",
+- "yup": "^0.32.8"
 
-### `yarn build`
+### Prerequisites
+NodeJS: https://nodejs.org/en/
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setting up Dev
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Here's a brief intro about what a developer must do in order to start developing
+the project further:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```shell
+git clone https://github.com/flavioms/login-challenge
+cd login-challenge/
+packagemanager install
+```
 
-### `yarn eject`
+## Tests
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To run the tests run the command below
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```shell
+npm test
+```
+or
+```shell
+yarn test
+```
+Input Test - Tests possible situations that may occur with the input components
+Button Test - Tests possible situations that may occur with the button components
+Confirm Test - Tests possible situations that may occur with the confirm component
+Toast Test - Tests possible situations that may occur with the toast component
+Form Test - Tests filling and sending the form completely
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Style guide
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The styled components were used as a style pattern and as documentation it is possible to check in the storybook
+```shell
+npm storybook
+```
+or
+```shell
+yarn storybook
+```
+When executing this code the storybook page will be loaded with all the components defined
